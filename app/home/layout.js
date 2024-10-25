@@ -25,18 +25,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased grid`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-      <div className="md:grid md:grid-cols-[320px_1fr] lg:grid-cols-[320px_1fr] gap-0">
-      <div className="">
-      <SideBar />
-      </div>
+      
+      
+      
         
-        <div className="">
-          {children}
+        {/* <div className="lg:max-w-[calc(100%-335px)] md:w-[calc(100%-335px)] overflow-x-clip"> */}
+       
+        
+        {children}
+        
+         
           <Footer />
-        </div>
-        </div>
+        
       </body>
     </html>
   );

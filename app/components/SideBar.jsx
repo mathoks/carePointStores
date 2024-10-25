@@ -2,11 +2,11 @@ import React from 'react'
 
 const SideBar = () => {
   return (
-    <div className="drawer lg:drawer-open md:drawer-open fixed top-0 ">
+    <div className="drawer lg:drawer-open md:drawer-open fixed top-0 h-[100vh]">
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
   <div className="drawer-content flex flex-col items-center justify-center">
     {/* Page content here */}
-    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">
+    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden md:hidden">
     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -4,7 +4,7 @@ import HeroButton from './bottons/HeroButton'
 const Hero = () => {
   return (
     <div
-    className="hero min-h-screen"
+    className="hero min-h-[50%] "
     style={{
       backgroundImage: "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
     }}>

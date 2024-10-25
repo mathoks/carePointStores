@@ -2,8 +2,8 @@ import SideBar from "./SideBar";
 
 export default function Navbar() {
     return (
-<div className="navbar bg-base-100 fixed  z-50  ">
-  <div className="navbar-start md:w-[10%]">
+<div className="navbar bg-base-100 fixed  z-50 lg:w-[calc(100%-320px)] md:w-[calc(100%-320px)] ">
+  <div className="navbar-start">
     <div className="dropdown md:hidden">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
         <svg
@@ -32,8 +32,8 @@ export default function Navbar() {
     <a className="btn btn-ghost text-xl">CarePointStores</a>
   </div>
   <div className="navbar-end">
-  <div className="form-control">
-      <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
+  <div className="form-control hidden md:block lg:block">
+      <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto " />
     </div>
     <button className="btn btn-ghost btn-circle md:hidden lg:hidden">
       <svg
