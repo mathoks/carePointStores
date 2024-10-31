@@ -5,7 +5,7 @@ import Hero from "../components/Hero";
 import Products from "../components/Products";
 import Tabs from "../components/Tabs";
 import Trending from "../components/Trending";
-import SideBar from "../components/SideBar";
+import {SideBar} from "../components/SideBar";
 
 export default function Home() {
     const List = Array.from({ length: 10 }, (_, i) => i + 1);
@@ -15,10 +15,7 @@ export default function Home() {
       <SideBar />
       </div>
   <div className=" gap-0 grid grid-cols-12  ">
-      <header style={{gridColumn: "1/13"}}>
-        <Navbar />
-      </header>
-     
+    
         <div style={{gridColumn: "1/13"}}>
      <Hero/>
      </div>

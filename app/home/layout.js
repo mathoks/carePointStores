@@ -27,15 +27,15 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-      
+      <Navbar/>
       
       
         
         {/* <div className="lg:max-w-[calc(100%-335px)] md:w-[calc(100%-335px)] overflow-x-clip"> */}
        
-        
+        <div className="p-4 md:px-2 lg:px-16 pt-20">
         {children}
-        
+        </div>
          
           <Footer />
         

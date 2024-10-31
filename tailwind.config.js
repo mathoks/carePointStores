@@ -12,6 +12,7 @@ module.exports = {
         foreground: "var(--foreground)",
       },
     },
+  
   },
   
     plugins: [
@@ -25,4 +26,5 @@ module.exports = {
       logs: true,
       rtl: false,
     },
+    darkMode: "class"
 };
