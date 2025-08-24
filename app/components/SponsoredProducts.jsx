@@ -9,16 +9,16 @@ const SponsoredProducts = () => {
     "https://healthplusnigeria.com/cdn/shop/files/imz9yocdw1caxmvwfpmt.webp?v=1726896807"
   ];
   return (
-    <div className=" bg-slate-100  carousel inline-flex items-center  w-[calc(100vw-32px)] md:w-[calc(100%-4px)] gap-2">
+    <div className=" bg-schemes-light-surface  carousel inline-flex items-center  w-[calc(100vw-16px)] md:w-[calc(100%-4px)] gap-2">
       {List.map((image, i) => (
         <div
           key={i}
-          className=" w-40 h-fit bg-white min-w-40 my-2  flex flex-col space-y-2"
+          className=" w-40 h-fit bg-schemes-light-surface text-schemes-light-onSurface  min-w-40 my-2  flex flex-col space-y-2"
         >
           <div>
             <img src={image} />
           </div>
-          <div className="text-slate-950 ">
+          <div className=" px-2">
             <span className=" line-clamp-1 text-sm">
               Vitamin C 1000mg gggggggggggggggggggggggggggggg
             </span>

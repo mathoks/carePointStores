@@ -5,6 +5,7 @@ import HalfStar from '../../public/icons/HalfStar';
 
 
 const Stars = memo(function Starss({ rating, size, size1 = '' }) {
+  console.log(rating, typeof(rating))
   const stars = useMemo(() => {
     const starsArray = new Array(5);
 
@@ -15,7 +16,7 @@ const Stars = memo(function Starss({ rating, size, size1 = '' }) {
       if (i < filledStars) {
         starsArray[i] = <li key={i}><StarIcon fontSize='inherit' text={ 'text-[gold]'} fillcol={'gold'} /></li>;
       } else if (i === filledStars && halfStar) {
-        starsArray[i] = <li key={i}><HalfStar fontSize='inherit'  text={ 'text-[gold]'} /></li>;
+        starsArray[i] = <li key={i}><HalfStar fontSize='inherit'  text={ 'text-[gold]'} offset = {(rating % 1) * 100} /></li>;
       } else {
         starsArray[i] = <li key={i}><StarIcon fontSize='inherit' text={ 'text-[gold]'} fillcol={"none"} /></li>;
       }
@@ -25,8 +26,9 @@ const Stars = memo(function Starss({ rating, size, size1 = '' }) {
   }, [rating]);
 
   return (
+    typeof rating === 'number' &&
     <div className={`flex space-x-2 text-[14px] items-center ${size1}`}>
-      <p className={size}>{Number(rating).toFixed(1)}</p>
+      <p className={size}>{rating.toFixed(1)}</p>
       <ul className='flex space-x-0'>
         {stars}
       </ul>

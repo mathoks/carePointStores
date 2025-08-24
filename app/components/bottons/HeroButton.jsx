@@ -9,7 +9,7 @@ const HeroButton = (props = {path: null, tag: null}) => {
     }
 
   return (
-    <button className="btn btn-primary"><Link href={`${props?.path}`}>{props?.tag}</Link></button>
+    <button className="btn  bg-schemes-light-primary text-schemes-light-onPrimary border-none "><Link href={`${props?.path}`}>{props?.tag}</Link></button>
   )
 }
 

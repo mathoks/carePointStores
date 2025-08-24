@@ -1,30 +1,14 @@
-"use client"
+"use client";
 
-import React from 'react'
-import { fetchCartData } from '../Cart/CartView'
-import { useAppDispatch } from '@/app/lib/hooks'
-import { setData } from '@/app/lib/features/cart/cartSlice'
-import Link from 'next/link'
+import React, { memo } from "react";
+import Link from "next/link";
 
-
-
-const ViewCartBtn = () => {
-    const dispatch = useAppDispatch()
-    const handleChange=(e)=>{
-        fetchCartData()
-          .then((data) => {
-            console.log(data)
-            dispatch(setData(data));
-          })
-          .catch((err) => console.log(err))
-          .finally(() => console.log('done'));
-        
-    }
-    
-
+const ViewCartBtn = memo(function ViewCart({userId, hasItem}){
   return (
-    <button onClick={handleChange} className="btn btn-primary btn-block"><Link href={"/home/cart"}>View cart</Link></button>
-  )
-}
+    <button disabled = {hasItem} className="btn  bg-schemes-light-primary text-schemes-light-onPrimary  border-none btn-block disabled:bg-schemes-light-primary disabled:text-schemes-light-onPrimary ">
+      <Link href={`/home/cart/${userId}`}>{hasItem ? 'Cart empty' :'View cart'}</Link>
+    </button>
+  );
+});
 
-export default ViewCartBtn
+export default ViewCartBtn;

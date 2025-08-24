@@ -1,19 +1,10 @@
-import { AddToCart } from "@/app/components/bottons/AddToCart";
 import AddCart from "@/app/components/Cart/AddCart";
 import CartView from "@/app/components/Cart/CartView";
 import Carousal2 from "@/app/components/Carusal2";
-import CallIcon from "@/public/icons/CallIcon";
 import DetailsIcon from "@/public/icons/DetailsIcon";
 import ShareIcon from "@/public/icons/ShareIcon";
-import City from "@/app/components/inputs/City";
-import State from "@/app/components/inputs/State";
 import StateCity from "@/app/components/inputs/StateCity";
-import Navbar from "@/app/components/Navbar";
-import ProdCarousal from "@/app/components/ProdCarousal";
-import {SideBar2} from "@/app/components/SideBar";
 import SponsoredProducts from "@/app/components/SponsoredProducts";
-import Trending from "@/app/components/Trending";
-import RatingStar from "@/app/util/RatingsStar";
 import Stars from "@/app/util/Stars";
 import React from "react";
 

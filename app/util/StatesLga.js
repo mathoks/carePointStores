@@ -1,3 +1,22 @@
+import ReactCountryFlag from "react-country-flag";
+import { useAppDispatch } from "../lib/hooks";
+
+
+
+export function CountryFlagDisplay({ countryName , countryCode, setCountry, show=false }) {
+  const handleIndex = Country.findIndex(country=> country.name === countryName);
+  const dispatch = useAppDispatch()
+  const handleChange = ()=>{
+    dispatch(setCountry(handleIndex)); 
+  }  
+  return (
+    <button onClick={handleChange} className="flex space-x-4 items-center">
+      <ReactCountryFlag   countryCode={countryCode} svg />
+     {show && <span>{countryName}</span>}
+    </button>
+  );
+}
+
 export const States = [
     "Abia",
     "Adamawa",
@@ -37,6 +56,42 @@ export const States = [
     "Yobe",
     "Zamfara"
   ]
+
+  
+    // {name:"Borno",
+    // {name:"Cross River",
+    // {name:"Delta",
+    // "Ebonyi",
+    // "Edo",
+    // "Ekiti",
+    // "Enugu",
+    // "FCT - Abuja",
+    // "Gombe",
+    // "Imo",
+    // "Jigawa",
+    // "Kaduna",
+    // "Kano",
+    // "Katsina",
+    // "Kebbi",
+    // "Kogi",
+    // "Kwara",
+    // "Lagos",
+    // "Nasarawa",
+    // "Niger",
+    // "Ogun",
+    // "Ondo",
+    // "Osun",
+    // "Oyo",
+    // "Plateau",
+    // "Rivers",
+    // "Sokoto",
+    // "Taraba",
+    // "Yobe",
+    // "Zamfara"
+  //]
+
+  
+
 export const lgaList = {
     Abia: [
       "Aba North",
@@ -915,3 +970,19 @@ export const lgaList = {
       "Zurmi"
     ]
 }
+
+const NStates = [
+  {name: "Abia", LGAs: lgaList["Abia"]},
+  {name:"Adamawa",LGAs: lgaList["Adamawa"]},
+  {name:"Akwa Ibom",LGAs: lgaList["Akwa Ibom"]},
+  {name:"Anambra",LGAs: lgaList["Anambra"]},
+  {name:"Bauchi",LGAs: lgaList["Bauchi"]},
+  {name:"Bayelsa",LGAs: lgaList["Bayelsa"]},
+  {name:"Benue",LGAs: lgaList["Benue"]}, ]
+
+  export const Country = [
+    { name: 'Nigeria' , state: NStates, logo: 'NG', code: '+234'},
+    { name: 'Ghana' , state: NStates, logo: 'GH', code: '+254'},
+    { name: 'Cameron' , state: NStates, logo: 'CM', code: '+244'},
+    { name: 'Togo' , state: NStates, logo: 'TG', code: '+534'},
+  ]

@@ -2,9 +2,9 @@ import React from 'react'
 
 export const SideBar = () => {
   return (
-    <div className="drawer lg:drawer-open md:drawer-open fixed top-0 h-[100vh]">
+    <div className="drawer lg:drawer-open md:drawer-open  top-40 ">
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-  <div className="drawer-content flex flex-col items-center justify-center">
+  <div className="drawer-content flex flex-col items-center justify-center ">
     {/* Page content here */}
     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden md:hidden hidden">
     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -25,7 +25,7 @@ export const SideBar = () => {
   </div>
   <div className="drawer-side">
     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-    <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+    <ul className="menu text-schemes-light-onPrimaryContainer  min-h-full w-80 p-4">
       {/* Sidebar content here */}
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
@@ -37,7 +37,7 @@ export const SideBar = () => {
 
 export const SideBar2 = () => {
     return (
-      <div className="drawer drawer-open ">
+      <div className="drawer drawer-open  bg-schemes-light-primaryContainer mt-40 top-40">
     <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
     <div className="drawer-content flex flex-col items-center justify-center">
       {/* Page content here */}
@@ -58,9 +58,9 @@ export const SideBar2 = () => {
         </div>
       </label>
     </div>
-    <div className="drawer-side">
+    <div className="drawer-side bg-schemes-light-primaryContainer">
       <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-      <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+      <ul className="menu bg-schemes-light-primaryContainer text-schemes-light-onPrimaryContainer min-h-full w-80 p-4">
         {/* Sidebar content here */}
         <li><a>Sidebar Item 1</a></li>
         <li><a>Sidebar Item 2</a></li>
